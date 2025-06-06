@@ -1,5 +1,11 @@
 import os
 import asyncio
+import sys
+
+# Ensure we are running on a supported Python version.
+if not (sys.version_info.major == 3 and 8 <= sys.version_info.minor <= 12):
+    sys.exit("YouTube Music Bot requires Python 3.8–3.12.")
+
 import discord
 from discord.ext import commands
 import youtube_dl
